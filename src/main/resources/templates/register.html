@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Register Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ee16ffbb-3b9b-40a5-b4fd-cc7887e239cf&lang=ru_RU"></script>
+</head>
+<body>
+
+<section class="h-100">
+    <div class="container h-100">
+        <div class="row justify-content-sm-center h-100">
+            <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
+
+                <div class="card shadow-lg">
+                    <div class="card-body p-5">
+                        <h1 class="fs-4 card-title fw-bold mb-4">Register</h1>
+                        <form class="needs-validation">
+                            <div class="mb-3">
+                                <label for="name" class="sr-only"></label>
+                                <input id="name" type="text" class="form-control" name="name" placeholder="First name"
+                                       required autofocus>
+                                <div class="invalid-feedback">
+                                    Name is required
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="mb-2 text-muted" for="lastName"></label>
+                                <input id="lastName" type="text" class="form-control" name="lastName"
+                                       placeholder="Last name" required autofocus>
+                                <div class="invalid-feedback">
+                                    Name is required
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="mb-2 text-muted" for="age"></label>
+                                <input id="age" type="number" class="form-control" name="age" placeholder="Age"
+                                       required autofocus>
+                                <p id="errorAgeRegister" class="text-danger"></p>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="mb-2 text-muted" for="email"></label>
+                                <input id="email" type="email" class="form-control" name="email" placeholder="Email"
+                                       required>
+                                <div class="invalid-feedback">
+                                    Email is invalid
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="mb-2 text-muted" for="password"></label>
+                                <input id="password" type="password" class="form-control" name="password"
+                                       placeholder="Password" required>
+                                <div class="invalid-feedback">
+                                    Password is required
+                                </div>
+                            </div>
+
+                            <div id="map" style="width: 600px; height: 400px"></div>
+
+
+                            <div hidden class="mb-3">
+                                <select id="role" class="custom-select" size="1">
+                                    <option value="ROLE_USER">USER</option>
+                                </select>
+                            </div>
+                            <br>
+
+                            <div class="align-items-center d-flex">
+                                <button id="registerBtn" type="submit" class="btn btn-primary ms-auto">
+                                    Register
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer py-3 border-0">
+                        <div class="text-center">
+                            Already have an account? <a href="login" class="text-dark">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="registerUser.js"></script>
+<script src="map.js"></script>
+</body>
+</html>
